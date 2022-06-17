@@ -1,0 +1,14 @@
+# dependencies
+node_modules
+
+# production
+build
+dist
+
+# dev
+lerna-debug.log
+npm-debug.log
+*.env
+
+# misc
+.DS_Store
