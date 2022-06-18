@@ -1,5 +1,5 @@
 FROM node
-WORKDIR /proyectoAPI
+WORKDIR /usr/src/api
 
 COPY ./package*.json ./
 RUN npm install

@@ -11,10 +11,10 @@ services:
   api:
     build:
       context: ./server
-      dockerfile: ${DOCKERFILE_SERVER}
+      dockerfile: Dockerfile
     volumes:
-      - ./server:/proyectoAPI
-      - /proyectoAPI/node_modules
+      - './:/api'
+      - '/api/node_modules'
     ports:
       - '4000:4000'
     environment:
@@ -22,12 +22,12 @@ services:
   client:
     build:
       context: ./client
-      dockerfile: ${DOCKERFILE_CLIENT}
+      dockerfile: Dockerfile
     volumes:
-      - ./client:/proyectoClient
-      - /proyectoClient/node_modules
+      - './:/app'
+      - '/app/node_modules'
     ports:
-      - '3000:3000'
+      - '180:180'
     environment:
       - NODE_ENV=development
 volumes:
